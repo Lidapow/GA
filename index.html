@@ -31,7 +31,11 @@
       ga('create', 'UA-88453347-1', 'auto');
       ga('send', 'pageview');
 
-      $('.button.play').on('click', function() {ga('send', 'event', 'play', 'credit', $('.credit').text());})
+      ga('set', 'page', 'mygame');
+      $('.button.play').on('click', function() {
+        ga('send', 'event', 'play', 'credit', $('.credit').text());
+        $('.credit').text( $('.credit').text() - 1 );
+      })
       $('.button.setting').on('click', function() {ga('send', 'event', 'setting', 'first', 0);})
     </script>
   </body>
