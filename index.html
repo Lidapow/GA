@@ -16,9 +16,9 @@
     <div class="credit">5,566</div>
     <div class="win">100</div>
     <div class="buttons">
-      <div class="play"><a href="javascript:void(0)">PLAY</a></div>
-      <div class="setting"><a href="javascript:void(0)">SETTING</a></div>
-      <div class="auto"><a href="javascript:void(0)">AUTO</a></div>
+      <div class="button play"><a href="javascript:void(0)">PLAY</a></div>
+      <div class="button setting"><a href="javascript:void(0)">SETTING</a></div>
+      <div class="button auto"><a href="javascript:void(0)">AUTO</a></div>
     </div>
 
     
@@ -31,6 +31,8 @@
       ga('create', 'UA-88453347-1', 'auto');
       ga('send', 'pageview');
 
+      $('.button.play').on('click', function() {ga('send', 'event', 'play', 'credit', $('.credit').text());})
+      $('.button.setting').on('click', function() {ga('send', 'event', 'setting', 'first', 0);})
     </script>
   </body>
 </html>
